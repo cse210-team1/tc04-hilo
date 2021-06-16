@@ -36,3 +36,4 @@ root                    (project root folder)
 ## Authors
 ---
 David Bloomfield: david.s.bloomfield@gmail.com
+TJ Putnam: Teetothejay13@gmail.com
