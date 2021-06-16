@@ -13,4 +13,20 @@ class Dealer:
         return self.current_card
     # Take the user guess and calculate their points after gaining/losing
     def calculate_points(self, guess):
-        pass
+        # If statements for each scenario
+        if guess == "h" and self.current_card >= self.previous_card:
+            self.score += 100
+        elif guess == "h" and self.current_card < self.previous_card:
+            if self.score < 75:
+                self.score = 0
+            else:
+                self.score -= 75
+        elif guess == "l" and self.current_card >= self.previous_card:
+            if self.score < 75:
+                self.score = 0
+            else:
+                self.score -= 75
+        elif guess == "l" and self.current_card < self.previous_card:
+            self.score += 100
+        # Return the score for the director to deal with
+        return self.score
