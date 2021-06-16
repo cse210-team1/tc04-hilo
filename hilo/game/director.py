@@ -4,6 +4,7 @@ from game.dealer import dealer
 class Director:
     def __init__(self):
         self.dealer = dealer()
+        self.guess = ""
         self.score = 300
 
     def game_run(self):
@@ -23,7 +24,8 @@ class Director:
 
     def do_outputs(self):
         """ Gets the socre from the dealer and prints it"""
-        self.score = self.dealer.calculate_points()
+        self.score = self.dealer.calculate_points(self.guess)
+        # If their score is 0 or below, end the game
         print(f"Your Score is: {self.score}")
 
     def can_play(self):
