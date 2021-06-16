@@ -32,6 +32,7 @@ root                    (project root folder)
 ## Required Technologies
 ---
 * Python 3.8.0
+* colorama module
 
 ## Authors
 ---
