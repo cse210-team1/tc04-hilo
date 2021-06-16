@@ -9,7 +9,7 @@ class Dealer:
     # Generate a random card to draw and return
     def draw_card(self):
         self.previous_card = self.current_card
-        self.current_card = random.randint(1, 13)
+        self.current_card = random.randint(1, 14)
         return self.current_card
     # Take the user guess and calculate their points after gaining/losing
     def calculate_points(self, guess):
