@@ -3,7 +3,7 @@ import random
 class Dealer:
     # Define the points and initialize the card
     def __init__(self):
-        self.points = 300
+        self.score = 300
         self.current_card = 0
         self.previous_card = 0
     # Generate a random card to draw and return

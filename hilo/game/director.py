@@ -5,13 +5,14 @@ class Director:
     def __init__(self):
         self.dealer = Dealer()
         self.guess = ""
-        self.score = 300
 
     def game_run(self):
         while self.can_play():
             self.get_inputs()
             self.do_outputs()
-            if input("Play again? [y/n] ") != "y":
+            if not self.can_play():
+                print("Better luck next time!")
+            elif input("Play again? [y/n] ") != "y":
                 break
             print()
     def get_inputs(self):
@@ -25,12 +26,12 @@ class Director:
 
     def do_outputs(self):
         """ Gets the socre from the dealer and prints it"""
-        self.score += self.dealer.calculate_points(self.guess)
+        score = self.dealer.calculate_points(self.guess)
         # If their score is 0 or below, end the game
-        print(f"Your Score is: {self.score}")
+        print(f"Your Score is: {score}")
 
     def can_play(self):
-        if self.score <= 0:
+        if self.dealer.score <= 0:
             return False
         else:
             return True
