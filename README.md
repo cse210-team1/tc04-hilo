@@ -38,3 +38,4 @@ root                    (project root folder)
 David Bloomfield: david.s.bloomfield@gmail.com
 TJ Putnam: Teetothejay13@gmail.com
 Steven Sellers: sseller6@byui.edu
+Jacob Cloward: jcloward@byui.edu
